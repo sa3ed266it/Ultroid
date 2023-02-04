@@ -50,8 +50,7 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("• Repo •", url="https://github.com/TeamUltroid/Ultroid"),
-        Button.url("• Support •", url="t.me/UltroidSupportChat"),
+        Button.url("• Support •", url="t.me/IT_S6"),
     ],
 ]
 
@@ -195,7 +194,7 @@ async def uptd_plugin(event):
                 help_ += "\n"
     if not help_:
         help_ = f"{file} has no Detailed Help!"
-    help_ += "\n© @TeamUltroid"
+    help_ += "\n© @IT_S6"
     buttons = []
     if inline_pic():
         data = f"sndplug_{key}_{file}"
@@ -400,7 +399,7 @@ async def ibuild(e):
                             _pic,
                             title="Ultroid Op",
                             text=txt,
-                            description="@TeamUltroid",
+                            description="@IT_S6",
                             buttons=btn,
                             link_preview=False,
                         )
@@ -416,7 +415,7 @@ async def ibuild(e):
                         title="Ultroid Op",
                         type=_type,
                         text=txt,
-                        description="@TeamUltroid",
+                        description="@IT_S6",
                         include_media=include_media,
                         buttons=btn,
                         thumb=cont,
