@@ -52,7 +52,7 @@ async def _help(ult):
                 output = f"**Plugin** - `{plug}`\n"
                 for i in HELP["Addons"][plug]:
                     output += i
-                output += "\n© @TeamUltroid"
+                output += "\n@IT_S6"
                 await ult.eor(output)
             elif HELP.get("VCBot") and plug in HELP["VCBot"]:
                 output = f"**Plugin** - `{plug}`\n"
