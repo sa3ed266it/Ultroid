@@ -222,7 +222,7 @@ async def chatBot_replies(e):
           "cc": "UK",
           "tz": "Europe/London",
           "cv": "",
-          "message": message,
+          "message": e,
           "free_level": 1,
           "logUID": "414477568",
           "reg_now_days": 0
