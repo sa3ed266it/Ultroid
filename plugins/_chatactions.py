@@ -223,7 +223,7 @@ async def chatBot_replies(e):
           "tz": "Europe/London",
           "cv": "",
           "message": e.message.message,
-          "free_level": 10,
+          "free_level": 1,
           "logUID": "414477568",
           "reg_now_days": 0
         }
@@ -235,7 +235,7 @@ async def chatBot_replies(e):
         out = re.sub('@[a-zA-Z]{3,}', '،', out)
         out = re.sub(r'[0-9]+', '', out)
         sleep = udB.get_key("CHATBOT_SLEEP") or 0.5
-
+        await asyncio.sleep(sleep)
         await e.reply(out)
     chat = await e.get_chat()
     if e.is_group and not sender.bot:
