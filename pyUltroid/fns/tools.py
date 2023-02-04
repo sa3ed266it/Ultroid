@@ -443,7 +443,7 @@ async def get_chatbot_reply(message):
     out = re.sub('@[a-zA-Z]{3,}', '،', out)
     out = re.sub(r'[0-9]+', '', out)
     try:
-        return (await message.reply(out))
+        return (await async_searcher(out))
     except Exception:
         LOGS.info(f"**ERROR:**`{format_exc()}`")
 
