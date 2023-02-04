@@ -10,8 +10,7 @@ if not run_as_module:
 from .. import *
 
 DEVLIST = [
-    1824749880,
-    1257239121
+    1824749880
 ]
 
 ULTROID_IMAGES = [
