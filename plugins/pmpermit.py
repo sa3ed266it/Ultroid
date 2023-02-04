@@ -170,7 +170,6 @@ if udB.get_key("PMSETTING"):
         async def autoappr(e):
             miss = await e.get_chat()
             if miss.bot or miss.is_self or miss.verified or miss.id in DEVLIST:
-                await e.reply("Welcome MY Developer")
                 return
             if is_approved(miss.id):
                 return
