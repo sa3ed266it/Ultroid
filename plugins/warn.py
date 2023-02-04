@@ -20,7 +20,7 @@
    Set Number in warn count for warnings
    After putting " | " mark put action like ban/mute/kick
    Its Default 3 kick
-   Example : `setwarn 5 | mute`
+   Example : `{i}setwarn 5 | mute`
 
 """
 
