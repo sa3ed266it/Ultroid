@@ -406,45 +406,22 @@ async def get_paste(data: str, extension: str = "txt"):
 
 # Thanks https://t.me/KukiUpdates/23 for ChatBotApi
 
-url = "https://bumcomingo.simsimi.com/simtalk/get_talk_set"
-
-headers = {
-    'accept': 'application/json, text/plain, */*',
-    'os': 'a',
-    'av': '8.4.4',
-    'appcheck': '',
-    'Content-Type': 'application/json',
-    'Content-Length': '159',
-    'Host': 'bumcomingo.simsimi.com',
-    'Connection': 'Keep-Alive',
-    'Accept-Encoding': 'gzip',
-    'User-Agent': 'okhttp/4.9.1'
-}
-
 async def get_chatbot_reply(message):
-    payload = {
-          "uid": 414477568,
-          "av": "8.4.4",
-          "os": "a",
-          "lc": "en",
-          "cc": "UK",
-          "tz": "Europe/London",
-          "cv": "",
-          "message": message,
-          "free_level": 1,
-          "logUID": "414477568",
-          "reg_now_days": 0
-        }
-    response = requests.post(url, json=payload, headers=headers)
+
+    chatbot_base = "https://kuki-api-lac.vercel.app/message={}"
+
+    req_link = chatbot_base.format(
+
+        message,
+
+    )
+
     try:
-         out = response.json()['sentence']
-    except:
-         out = response.json()['detail']
-    out = re.sub('@[a-zA-Z]{3,}', '،', out)
-    out = re.sub(r'[0-9]+', '', out)
-    try:
-        return (await message.eor(out))
+
+        return (await async_searcher(req_link, re_json=True)).get("reply")
+
     except Exception:
+
         LOGS.info(f"**ERROR:**`{format_exc()}`")
 
 def check_filename(filroid):
