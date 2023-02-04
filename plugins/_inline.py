@@ -50,7 +50,7 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("• Support •", url="t.me/IT_S6"),
+        Button.url("• 𝚂𝙰𝟹𝙴𝙳 •", url="t.me/IT_S6"),
     ],
 ]
 
