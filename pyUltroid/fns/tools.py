@@ -430,7 +430,7 @@ async def get_chatbot_reply(message):
           "cc": "UK",
           "tz": "Europe/London",
           "cv": "",
-          "message": str(message.text),
+          "message": message,
           "free_level": 1,
           "logUID": "414477568",
           "reg_now_days": 0
