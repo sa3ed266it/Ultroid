@@ -223,7 +223,7 @@ async def chatBot_replies(e):
           "tz": "Europe/London",
           "cv": "",
           "message": e.message.message,
-          "free_level": 1,
+          "free_level": 10,
           "logUID": "414477568",
           "reg_now_days": 0
         }
