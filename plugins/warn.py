@@ -63,9 +63,9 @@ async def warn(e):
         x = udB.get_key("SETWARN")
         number, action = int(x.split()[0]), x.split()[1]
     except BaseException:
-        number, action = 3, "kick"
+        number, action = 3, "mute"
     if ("ban" or "kick" or "mute") not in action:
-        action = "kick"
+        action = "mute"
     if count + 1 >= number:
         if "ban" in action:
             try:
