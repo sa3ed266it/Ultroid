@@ -235,8 +235,9 @@ async def chatBot_replies(e):
         out = re.sub('@[a-zA-Z]{3,}', '،', out)
         out = re.sub(r'[0-9]+', '', out)
         sleep = udB.get_key("CHATBOT_SLEEP") or 0.5
-        await asyncio.sleep(sleep)
-        await e.reply(out)
+        async with e.client.action(e.chat_id, "typing"):
+           await asyncio.sleep(sleep)
+           await e.reply(out)
     chat = await e.get_chat()
     if e.is_group and not sender.bot:
         if sender.username:
