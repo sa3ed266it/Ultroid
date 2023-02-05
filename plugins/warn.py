@@ -97,10 +97,16 @@ async def warn(e):
     add_warn(e.chat_id, user, count + 1, r)
     ok = await ultroid_bot.get_entity(user)
     user = inline_mention(ok)
-    await eor(
-        e,
-        f"**WARNING :** {count+1}/{number}\n**To :**{user}\n**Be Careful !!!**\n\n**Reason** : {reason}",
-    )
+    if reason:
+       await eor(
+           e,
+           f"WARNING : {count+1}/{number}\nTo : {user}\n\nReason : {reason}",
+       )
+    else:
+       await eor(
+           e,
+           f"WARNING : {count+1}/{number}\nTo : {user}",
+           )
 
 
 @ultroid_cmd(
