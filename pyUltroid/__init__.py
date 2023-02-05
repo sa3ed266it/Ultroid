@@ -88,7 +88,7 @@ if sys.argv[0] == "-m":
 
     _version_changes(udB)
 
-    HNDLR = udB.get_key("HNDLR") or ""
+    HNDLR = udB.get_key("HNDLR") or "."
     DUAL_HNDLR = udB.get_key("DUAL_HNDLR") or "/"
     SUDO_HNDLR = udB.get_key("SUDO_HNDLR") or HNDLR
 else:
