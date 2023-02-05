@@ -87,11 +87,11 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                 res = [
                     await event.builder.article(
                         title="Ultroid Userbot",
-                        url="https://t.me/TeamUltroid",
-                        description="(c) TeamUltroid",
+                        url="https://t.me/IT_S6",
+                        description="Sa3ed",
                         text=MSG,
                         thumb=InputWebDocument(
-                            "https://graph.org/file/dde85d441fa051a0d7d1d.jpg",
+                            "https://graph.org/file/1dc4d3663f4bee1ef5176.jpg",
                             0,
                             "image/jpeg",
                             [],
